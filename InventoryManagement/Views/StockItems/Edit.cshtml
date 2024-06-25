@@ -1,0 +1,45 @@
+﻿@model InventoryManagement.Models.StockItem
+
+@{
+    ViewData["Title"] = "Edit";
+}
+
+<h1>Edit</h1>
+
+<h4>@Model.Description</h4>
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Edit" asp-route-id="@Model?.ProductId">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <input type="hidden" asp-for="ProductId" />
+            <input type="hidden" asp-for="Description" />
+            <div class="form-group">
+                <label asp-for="StockAmount" class="control-label"></label>
+                <input asp-for="StockAmount" class="form-control" />
+                <span asp-validation-for="StockAmount" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="SafeStockAmount" class="control-label"></label>
+                <input asp-for="SafeStockAmount" class="form-control" />
+                <span asp-validation-for="SafeStockAmount" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Price" class="control-label"></label>
+                <input asp-for="Price" class="form-control" />
+                <span asp-validation-for="Price" class="text-danger"></span>
+            </div>
+            <br />
+            <div class="form-group">
+                <input type="submit" value="Save" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+<br />
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

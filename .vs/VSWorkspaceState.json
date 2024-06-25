@@ -1,0 +1,13 @@
+{
+  "ExpandedNodes": [
+    "",
+    "\\InventoryManagement",
+    "\\InventoryManagement\\Controllers",
+    "\\InventoryManagement\\Models",
+    "\\InventoryManagement\\Repositories",
+    "\\InventoryManagement\\Views",
+    "\\InventoryManagement\\Views\\StockItems"
+  ],
+  "SelectedNode": "\\InventoryManagement",
+  "PreviewInSolutionExplorer": false
+}
